@@ -2,6 +2,8 @@ package com.CRM.Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.crm.Utility.Utility;
+
 public class HomePage {
 
 	//Encapsulation Identification(locators) + Actions
@@ -37,7 +39,9 @@ public class HomePage {
 	
 	public String getSignIn()
 	{
+		Utility.capture(driver);
 		driver.findElement(link).click();
+		Utility.capture(driver);
 		return driver.getCurrentUrl();
 	}
 	
